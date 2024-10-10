@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #32e6b7;
+    --hover-color: #20a175;
+    --navbar-bg-color: #fff;
+    --navbar-text-color: black;
+}
+body{
+    background-color: whitesmoke;
+}
+
+.navbar {
+    width: 90vw; /* Width of the navbar */
+    height: 12vh; /* Height of the navbar */
+    position: fixed; /* Fixed position at the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    display: flex; /* Flexbox layout for child elements */
+    background-color: var(--navbar-bg-color); /* Background color from CSS variable */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    padding: 1rem 2rem; /* Adjusted padding for more space */
+    margin-left: 2.5rem; /* Left margin */
+    border-bottom-left-radius: 1rem; /* Rounded bottom-left corner */
+    border-bottom-right-radius: 1rem; /* Optional: rounded bottom-right corner */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for elevation effect */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.navbar:hover {
+    /*background-color: var(--navbar-hover-bg-color); !* Change background color on hover *!*/
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+
+.navbar .navbar-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 5rem;
+    list-style: none;
+    color: var(--navbar-text-color);
+    text-decoration: none;
+    margin: 0;
+}
+
+.navbar .navbar-links li {
+    color: var(--navbar-text-color);
+    padding: 1rem;
+}
+.navbar .navbar-links li:hover {
+    color: #e64675;
+}
+.navbar .navbar-links hr {
+    border: none;
+    outline: none;
+}
+
+span h1 {
+    display: flex;
+    margin-left: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+
+
+}
+
+.navbar .navbar-btn .btn-primary {
+    padding: 0.75rem 1.3rem;
+    margin-right: 4.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.navbar .navbar-btn .btn-primary:hover {
+    background-color: var(--hover-color);
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .navbar .navbar-links {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navbar .navbar-links {
+        flex-direction: column;
+        margin: 0;
+        gap: 1rem;
+    }
+
+    .navbar .navbar-btn {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+    }
+
+    .navbar .navbar-links {
+        gap: 0.5rem;
+    }
+}
