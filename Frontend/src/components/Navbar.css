@@ -7,29 +7,34 @@
 body{
     background-color: whitesmoke;
 }
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
 
 .navbar {
-    width: 90vw; /* Width of the navbar */
-    height: 12vh; /* Height of the navbar */
-    position: fixed; /* Fixed position at the top */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    z-index: 1000; /* Ensure it stays on top of other elements */
-    display: flex; /* Flexbox layout for child elements */
-    background-color: var(--navbar-bg-color); /* Background color from CSS variable */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Space items evenly */
-    padding: 1rem 2rem; /* Adjusted padding for more space */
-    margin-left: 2.5rem; /* Left margin */
-    border-bottom-left-radius: 1rem; /* Rounded bottom-left corner */
-    border-bottom-right-radius: 1rem; /* Optional: rounded bottom-right corner */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for elevation effect */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    width: 90vw;
+    height: 12vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    background-color: var(--navbar-bg-color);
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    margin-left: 2.5rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .navbar:hover {
-    /*background-color: var(--navbar-hover-bg-color); !* Change background color on hover *!*/
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -43,6 +48,7 @@ body{
     text-decoration: none;
     margin: 0;
 }
+
 
 .navbar .navbar-links li {
     color: var(--navbar-text-color);
@@ -81,35 +87,48 @@ span h1 {
     cursor: pointer;
 }
 
-@media (max-width: 1200px) {
-    .navbar .navbar-links {
-        gap: 3rem;
-    }
+.img-links{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+
 }
 
-@media (max-width: 992px) {
-    .navbar {
-        flex-direction: column;
-        height: auto;
-    }
+.img-links-1{
+    width: 1.9rem;
+    border-radius: 50%;
+}
+.img-links-2{
+    width: 0.8rem;
+    border-radius: 50%;
 
-    .navbar .navbar-links {
-        flex-direction: column;
-        margin: 0;
-        gap: 1rem;
-    }
+}
+.dropdown{
+    position: absolute;
+    top:2.9rem;
+    right:0;
+    background-color: white;
+    width: 9rem;
+    justify-content:center ;
+    /*display: flex;*/
+    gap:1rem;
+    display: none;
 
-    .navbar .navbar-btn {
-        margin-top: 1rem;
-    }
+
+}
+.dropdown:hover{
+    position: absolute;
+    top:2.9rem;
+    right:0;
+    background-color: white;
+    width: 9rem;
+    justify-content:center ;
+    display: flex;
+    gap:1rem;
+
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        height: auto;
-    }
 
-    .navbar .navbar-links {
-        gap: 0.5rem;
-    }
-}
+
