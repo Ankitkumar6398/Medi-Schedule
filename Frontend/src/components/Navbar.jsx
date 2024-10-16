@@ -20,7 +20,7 @@ const Navbar = () => {
                 </h1>
             </span>
 
-            {/* ------------------------------------------------------------------Navigation Links-------------------------------------------------------- */}
+            {/* -------------------------------------------------------------------Navigation Links-------------------------------------------------------- */}
             <ul className="hidden md:flex items-center gap-6 font-medium">
                 <NavLink exact to="/" activeClassName="text-blue-900">
                     <li className="py-1 hover:text-blue-600 transition duration-300">Home</li>
