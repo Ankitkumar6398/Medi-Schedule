@@ -9,7 +9,7 @@ const Navbar = () => {
     const [token, setToken] = useState(true);
 
     return (
-        <div className="flex items-center justify-between text-sm py-5 mb-5 border-b border-gray-300 shadow-sm bg-white">
+        <div className="flex items-center justify-between text-sm py-5 mb-5 border-b border-gray-300 shadow-sm " style={{ backgroundColor: '#e1d9d1' }}>
             {/*------------------------------------ Logo ------------------------------------------------------*/}
             <span>
                 <h1
