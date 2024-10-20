@@ -5,8 +5,10 @@ import {createRoutesFromChildren} from "react-router-dom";
 export const AppContext = createContext();
 export const AppContextProvider = ( props ) => {
 
+    const currencySymbol = '$'
+
     const value = {
-        doctors
+        doctors,currencySymbol
 
     }
 

@@ -8,7 +8,7 @@ const Banner = () => {
             <div className='md:w-1/2 flex flex-col items-start'>
                 <h1 className='text-4xl font-bold text-gray-800 mb-2'>Book Your Appointment</h1>
                 <p className='text-lg text-gray-600 mb-6'>With 100+ Trusted Doctors</p>
-                <button className='px-6 py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition duration-300 ease-in-out'>
+                <button onClick={()=>{navigate('/login'); scrollTo(0,0)}} className='px-6 py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition duration-300 ease-in-out'>
                     Create Account
                 </button>
             </div>

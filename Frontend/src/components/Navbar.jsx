@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between text-sm py-5 mb-5 border-b border-gray-300 shadow-sm " style={{ backgroundColor: '#e1d9d1' }}>
             {/*------------------------------------ Logo ------------------------------------------------------*/}
             <span>
-                <h1
+                <h1 onClick={()=>navigate('/')}
                     className="text-4xl ml-2 font-bold bg-clip-text text-transparent bg-gradient-to-r
                     from-blue-600 via-indigo-500 to-purple-600 hover:from-blue-700 hover:via-indigo-600
                     hover:to-purple-700 cursor-pointer transition-all duration-300 ease-in-out">
