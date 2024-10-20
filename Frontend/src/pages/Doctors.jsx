@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AppContext } from "../context/AppContext.jsx";
 
 const Doctors = () => {
-
     const { speciality } = useParams();
     const [filterDoc, setFilterDoc] = useState([]);
     const { doctors } = useContext(AppContext);
@@ -22,7 +21,7 @@ const Doctors = () => {
     }, [doctors, speciality]);
 
     return (
-        <div className='container mx-auto p-6'>
+        <div className='container mx-auto p-6 bg-gray-100'> {/* Added background color */}
             <div className='flex flex-col lg:flex-row items-start gap-10 mt-10'>
                 {/* Filter Options */}
                 <div className='w-full lg:w-1/4 flex flex-col gap-4'>
