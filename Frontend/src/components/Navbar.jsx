@@ -54,7 +54,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 ) : (
-                    <button className="bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 text-white px-8 py-3
+                    <button className="bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 text-white px-8 py-3 mr-4
                                        rounded-md font-semibold shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-xl hidden md:block"
                         onClick={() => navigate('/login')}>
                         Register
