@@ -1,46 +1,49 @@
 import React from 'react';
-import {assets} from "../assets/assets.js";
+import { assets } from "../assets/assets.js";
 import './Header.css';
 
 const Header = () => {
     return (
-        <div className="flex flex-col md:flex-row flex-wrap bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg px-6 md:px-10 py-2 md:py-2 shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out">
-            {/*------------------------Left Side ------*/}
-            <div className="md:w-1/2 flex flex-col items-start justify-center gap-8 m-auto md:py-[10vw] md:mb-[-30px]">
-                <p className="text-3xl md:text-4xl lg:text-4xl text-white font-extrabold leading-tight md:leading-tight lg:leading-tight tracking-tight">
-                    Healing Starts Here: <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-pink-400">
-                        Book Your Appointment Today
+        <header className="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-blue-700 via-blue-500 to-blue-300 rounded-lg p-10 md:px-16 py-12 shadow-xl transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-103">
+
+            {/* Left Side */}
+            <div className="md:w-1/2 flex flex-col items-start justify-center gap-8 text-center md:text-left">
+                <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight md:leading-tight">
+                    Excellence in Care <br />
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-500">
+                        Schedule Your Appointment Today
                     </span>
+                </h1>
+
+                <p className="text-lg md:text-xl text-white/90 font-light leading-relaxed md:max-w-lg mx-auto md:mx-0">
+                    Discover trusted healthcare professionals and book your appointments seamlessly.
                 </p>
-                <div
-                    className="flex flex-col md:flex-row items-center gap-6 bg-gradient-to-r from-purple-600 to-indigo-500 p-6 rounded-lg shadow-lg text-white text-base font-light transition-all duration-300 ease-in-out hover:shadow-xl">
-                    <img
-                        className="w-28 rounded-full border-4 border-white shadow-md hover:scale-105 transition-transform duration-300 ease-in-out"
-                        src={assets.group_profiles}
-                        alt="Group of Profiles"
-                    />
-                    <p className="max-w-md leading-relaxed">
-                        Easily explore our comprehensive list of reliable doctors,
-                        <br className="hidden sm:block" />
-                        and book your appointment without any hassle.
-                    </p>
-                </div>
 
                 <a
-                    className="flex items-center gap-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-medium px-8 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300 ease-in-out text-sm m-auto md:m-0"
                     href="#speciality"
+                    className="mt-6 flex items-center justify-center gap-4 bg-gradient-to-r from-yellow-400 to-yellow-600 text-white font-semibold px-10 py-4 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-l hover:shadow-2xl"
                 >
-                    Book appointment
-                    <img className="w-4 transition-transform duration-300 ease-in-out hover:translate-x-1" src={assets.arrow_icon} alt="arrow" />
+                    Book Now
+                    <img
+                        className="w-5 h-5 transition-transform duration-300 ease-in-out hover:translate-x-2"
+                        src={assets.arrow_icon}
+                        alt="Arrow icon"
+                    />
                 </a>
             </div>
 
-            {/*--------------------------Right Side------------*/}
-            <div className="md:w-1/2 relative">
-                <img className="w-full md:absolute bottom-0 h-auto rounded-lg shadow-lg" src={assets.header_img} alt="Header" />
+            {/* Right Side */}
+            <div className="md:w-1/2 mt-8 md:mt-0 relative">
+                <div className="relative overflow-hidden rounded-lg shadow-lg hover:scale-101 transition-transform duration-300 ease-in-out">
+                    <img
+                        className="w-full h-auto rounded-lg"
+                        src={assets.header_img}
+                        alt="Healthcare professionals"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-blue-900/70 via-transparent to-transparent opacity-90 rounded-lg"></div>
+                </div>
             </div>
-        </div>
+        </header>
     );
 };
 

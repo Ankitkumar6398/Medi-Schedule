@@ -16,17 +16,18 @@ const Navbar = () => {
             <div className="container mx-auto flex items-center justify-between px-6">
                 {/* Logo */}
                 <span>
-                    <h1 onClick={() => navigate('/')}
-                        className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 hover:from-blue-700 hover:via-indigo-600 hover:to-purple-700 cursor-pointer transition-all duration-300 ease-in-out">
-                        MedSchedule
-                    </h1>
+                   <h1 onClick={() => navigate('/')}
+                       className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 hover:from-blue-700 hover:via-indigo-600 hover:to-purple-700 cursor-pointer transition-all duration-300 ease-in-out">
+    MedSchedule
+</h1>
+
                 </span>
 
                 {/* Navigation Links (Desktop View) */}
                 <ul className="hidden md:flex items-center space-x-8 font-medium">
                     <NavLink
                         to="/"
-                        className={({ isActive }) =>
+                        className={({isActive}) =>
                             isActive
                                 ? "text-indigo-700 font-semibold"
                                 : "hover:text-indigo-600 transition duration-300"
